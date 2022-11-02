@@ -66,7 +66,7 @@ export default {
             axios({
                 method: 'get',
                 url: '/course',
-                baseURL: 'http://localhost'
+                baseURL: location.protocol + '//' +location.hostname
             }).then(function (response) {
                 let courses = response.data;
                 vm.courses = Object.keys(courses).map(
